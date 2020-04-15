@@ -34,12 +34,5 @@
     "not op_mini all"
   ],
   "proxy": "http://localhost:4000",
-  "main": "server/server",
-  "nodemonConfig": {
-    "ext": "js,sql",
-    "ignore": [
-      "src/*",
-      "public/*"
-    ]
-  }
+  "main": "server/server"
 }
