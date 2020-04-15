@@ -53,7 +53,7 @@ export default function budgetReducer(state = initialState, action) {
         case ADD_PURCHASE + '_FULFILLED':
             return {
                 ...state,
-                purchases: action.payload,
+                ...action.payload,
                 loading: false
             }
         case REMOVE_PURCHASE + '_PENDING':
@@ -64,7 +64,7 @@ export default function budgetReducer(state = initialState, action) {
         case REMOVE_PURCHASE + '_FULFILLED':
             return {
                 ...state,
-                purchases: action.payload,
+                ...action.payload,
                 loading: false
             }
             default:

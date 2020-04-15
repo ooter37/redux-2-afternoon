@@ -26,7 +26,7 @@ componentDidMount() {
           <Nav firstName={this.props.user.firstName} lastName={this.props.user.lastName}/>
           <div className='content-container'>
             <div className="purchases-container">
-              <AddPurchase addPurchase={this.props.addPurchase}/>
+              <AddPurchase appPurchase={this.props.addPurchase}/>
               <DisplayPurchases purchases={this.props.budget.purchases} removePurchase={this.props.removePurchase}/>
             </div>
             <div className='chart-container'>
