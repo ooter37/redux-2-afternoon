@@ -16,7 +16,7 @@ export function requestBudgetData(){
     }
 }
 
-export default function budgetReducer(state = initialState, action) {
+export default function reducer(state = initialState, action) {
     switch (action.type) {
         case REQUEST_BUDGET_DATA + '_PENDING':
             return {
@@ -25,8 +25,8 @@ export default function budgetReducer(state = initialState, action) {
             }
         case REQUEST_BUDGET_DATA + '_FULFILLED':
             return {
-                ...state,
-                ...action.payload,
+                purchases: action.payload.purchases,
+                budgetLimit: action.payload.budgetLimit,
                 loading: false
             }
             default:
